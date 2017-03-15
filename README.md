@@ -47,6 +47,19 @@ $ mix phoenix.gen.model Contact contacts first_name last_name gender:integer bir
 
 mix ecto.migrate
 
+### seed the contact model
+
+Added faker package for populate Contact model
+
+### use alias in iex
+alias PhoenixElmContact.{Repo, Contact, Seeds}
+
+instead of
+
+	alias PhoenixElmContact.Repo
+	alias PhoenixElmContact.Contact
+	alias PhoenixElmContact.Seeds
+
 ## Part 2
 
 ### added scrivener_ecto allows you to paginate your Ecto queries with Scrivener.
@@ -54,3 +67,7 @@ mix ecto.migrate
 #### added scrivener_ecto to mix.exs
 
 mix deps.get
+
+modified lib/phoenix_elm_contact/repo.ex for basic configuration for use Scrivener
+
+modified web/router.ex
