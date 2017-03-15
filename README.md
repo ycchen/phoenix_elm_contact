@@ -41,12 +41,16 @@ iex -S mix phoenix.server
 
 http://localhost:4000
 
-# create model
+## create model
 
 $ mix phoenix.gen.model Contact contacts first_name last_name gender:integer birth_date:date location phone_number email headline:text picture
 
 mix ecto.migrate
 
-# add scrivener_ecto allow you to paginate your Ecto queries with Scrivener.
+## Part 2
 
+### added scrivener_ecto allows you to paginate your Ecto queries with Scrivener.
 
+#### added scrivener_ecto to mix.exs
+
+mix deps.get
